@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build && npm run copy:resource",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "copy:resource": "cp CNAME ./docs"
   },
   "dependencies": {
     "astro": "^1.4.2"
