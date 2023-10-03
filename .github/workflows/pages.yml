@@ -33,19 +33,20 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16        
-          cache: 'npm'
+          node-version: 18
+      - name: install pnpm
+        run: npm i pnpm@latest -g
       - name: Install
-        run: npm install
+        run: pnpm install
       - name: build
-        run: npm run build
+        run: pnpm build
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: './docs'
+          path: "./docs"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1

@@ -1,5 +1,5 @@
 {
-  "name": "@example/basics",
+  "name": "@kode/team-website",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -12,6 +12,8 @@
     "copy:resource": "cp CNAME ./docs"
   },
   "dependencies": {
-    "astro": "^1.4.2"
+    "@astrojs/react": "^3.0.2",
+    "@astrojs/tailwind": "^5.0.0",
+    "astro": "^3.2.2"
   }
 }
